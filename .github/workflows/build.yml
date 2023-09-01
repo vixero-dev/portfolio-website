@@ -1,0 +1,48 @@
+name: Build Next.js app
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - synchronize
+    paths:
+      - 'src/**'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 18.x
+
+jobs:
+  build:
+    name: build Next.js app
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Linting
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm run build

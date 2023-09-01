@@ -1,0 +1,25 @@
+.socials-container {
+  ul.social li {
+    display: inline-block;
+  }
+
+  ul.social li a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 17px;
+    margin: 0 12px;
+    background: #2b2a2a;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 1200px) {
+    ul.social {
+      text-align: center;
+    }
+  }
+}

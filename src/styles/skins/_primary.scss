@@ -1,0 +1,36 @@
+.home h1,
+.about .box-stats h3,
+.title-section h1 span,
+#menu li.active a,
+.contact .custom-span-contact svg {
+  color: var(--main-primary-color);
+}
+
+.home .home-details h1:before,
+.about .resume-box .icon,
+ul.social li a:hover,
+.preloader .loader,
+.header ul.icon-menu li.icon-box.react-tabs__tab--selected,
+.header ul.icon-menu li.icon-box:hover,
+.btn,
+.header .icon-box h2,
+.home .color-block,
+.title-section hr,
+.button:before,
+.button-icon {
+  background-color: var(--main-primary-color);
+}
+
+@media screen and (max-width: 991px) {
+  .header ul.icon-menu li.icon-box.react-tabs__tab--selected,
+  .header ul.icon-menu li.icon-box:hover {
+    background: var(--main-primary-color) !important;
+  }
+}
+
+.contact .contact-form input[type='text']:focus,
+.contact .contact-form input[type='email']:focus,
+.contact .contact-form textarea:focus,
+.button {
+  border: 1px solid var(--main-primary-color);
+}

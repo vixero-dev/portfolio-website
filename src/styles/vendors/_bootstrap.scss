@@ -1,0 +1,18 @@
+@import 'bootstrap/scss/bootstrap';
+
+.container {
+  max-width: 1200px;
+}
+
+.row > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+
+.none #showSwitcher {
+  display: none;
+}
