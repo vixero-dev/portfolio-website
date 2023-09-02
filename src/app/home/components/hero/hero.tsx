@@ -23,6 +23,8 @@ export default function Hero() {
               style={{
                 objectFit: 'cover',
               }}
+              width={746}
+              height={1020}
               alt="hero man"
             />
             <div className="col-12 col-lg-8 offset-lg-4 home-details text-center text-lg-start">
@@ -30,6 +32,8 @@ export default function Hero() {
                 <Image
                   src={heroContent.heroMobileImage}
                   className="img-fluid main-img-mobile d-sm-block d-lg-none"
+                  width={300}
+                  height={300}
                   alt="hero man"
                 />
                 <h1 className="text-uppercase poppins-font">
