@@ -34,6 +34,8 @@ export default function About() {
                         src={heroImgMobile}
                         placeholder="blur"
                         quality={100}
+                        width={300}
+                        height={300}
                         className="img-fluid main-img-mobile"
                         alt="about avatar"
                       />
