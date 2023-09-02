@@ -1,7 +1,4 @@
-'use client';
-
 import Image from 'next/image';
-import Link from 'next/link';
 
 import image404 from '@images/404.jpg';
 
@@ -31,9 +28,9 @@ export default function NotFound() {
               The page you are looking for could not be found.
             </p>
 
-            <Link href={'/'} className="button" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+            <a href="/" className="button" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
               BACK TO HOME
-            </Link>
+            </a>
           </div>
         </div>
       </div>
