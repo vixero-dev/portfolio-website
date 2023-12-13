@@ -1,4 +1,4 @@
-FROM node:18-alpine AS base
+FROM node:20-alpine AS base
 
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 # Install dependencies and build the source code
@@ -31,8 +31,6 @@ ARG RECAPTCHA_SECRET_KEY
 ENV RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
 ARG GOOGLE_DRIVE_RESUME_FILE_ID
 ENV GOOGLE_DRIVE_RESUME_FILE_ID=${GOOGLE_DRIVE_RESUME_FILE_ID}
-ARG GOOGLE_DRIVE_API_KEY
-ENV GOOGLE_DRIVE_API_KEY=${GOOGLE_DRIVE_API_KEY}
 
 # Copy the source code and build the application
 COPY . .
@@ -79,8 +77,6 @@ ARG RECAPTCHA_SECRET_KEY
 ENV RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
 ARG GOOGLE_DRIVE_RESUME_FILE_ID
 ENV GOOGLE_DRIVE_RESUME_FILE_ID=${GOOGLE_DRIVE_RESUME_FILE_ID}
-ARG GOOGLE_DRIVE_API_KEY
-ENV GOOGLE_DRIVE_API_KEY=${GOOGLE_DRIVE_API_KEY}
 
 # Start the application using PM2
 CMD ["pm2-runtime", "server.js"]
